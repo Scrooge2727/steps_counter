@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="ШАГОМЕР"
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:max="6000"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circular_shape"
+            android:progressDrawable="@drawable/circular_progress_bar" />
+
+        <TextView
+            android:id="@+id/steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Шаги"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:paddingTop="240dp"
+            android:text="Цель: 6000"
+            android:textColor="#2196F3"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Добавленный TextView для отображения местоположения и температуры -->
+    <TextView
+        android:id="@+id/speedSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Скорость ходьбы: 0 шагов/час"
+        android:textColor="#2196F3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/steps"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/locationAndTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Определяем текущие координаты..."
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загружаем данные о погоде..."
+        android:textSize="23sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/locationAndTemperature"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+
+
+</LinearLayout>
